@@ -4,6 +4,8 @@ define(function(require) {
 		,UserView = require('Views/UserView');
 	
 	var AppView = Backbone.View.extend({
+		className: "appView",
+		
 		initialize: function(options) {
 			// Store the users
 			if (!options.collection) throw "AppView expects a collection";

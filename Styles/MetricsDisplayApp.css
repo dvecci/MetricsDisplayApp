@@ -1,6 +1,9 @@
 #pageContainer {
   background-color: #7f8c8d; }
 
+.appView {
+  text-align: center; }
+
 .userPanel {
   border: 5px solid #000;
   width: 330px;

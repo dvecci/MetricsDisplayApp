@@ -5,9 +5,12 @@ $green: #27ae60;
 $mediumGray: #999;
 $lightGray: #ced2d5;
 
-
 #pageContainer {
 	background-color: $darkGray;
+}
+
+.appView {
+	text-align: center;
 }
 
 .userPanel {
