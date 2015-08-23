@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script>
+  <footer>
+  <script id="userTemplate" type="text/template">
+		<div class="userPanel">
+			<div class="userHeader">
+				<img class="avatar" src='<%- model.get("avatar") %>' />
+				<div class="userInfo">
+					<span class="userName"><%- model.get("name") %></span>
+					<span class="userOccupation"><%- model.get("occupation") %></span>
+				</div>
+			</div>
+			<div class="userFooter">
+				<div class="chartContainer">
+				</div>
+				<div class="metrics">
+					<div class="smallMetrics">
+						<div class="metricWrapper">
+							<span class="impressions metric"><%- model.get("impressions") %></span>
+							<span class="metricText">impressions</span>
+						</div>
+						<div class="metricWrapper">
+							<span class="conversions metric"><%- model.get("conversions") %></span>
+							<span class="metricText">conversions</span>
+						</div>
+					</div>
+					<div class="revenue metric"><%- model.get("revenue") %></div>
+				</div>
+			</div>
+		</div>
+	</script>
+	<script type="text/template" id="chartTemplate">
+		<div class="chartContainer">
+			<div class="canvasWrapper"></div>
+			<div class="chartText"></div>
+		</div>
+	</script>
+	<script src="testRequireConfig.js"></script>
+	<script data-main="../Tests/tests.js" src="../Libraries/require.js"></script>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define(["require","backbone","Views/UserView"],function(e){"use strict";var t=e("backbone"),n=e("Views/UserView"),r=t.View.extend({initialize:function(e){if(!e.collection)throw"AppView expects a collection";this.collection=e.collection,this.render()},render:function(){var e=this;e.collection.each(function(t){var r=new n(t);e.$el.append(r.$el)})}});return r});

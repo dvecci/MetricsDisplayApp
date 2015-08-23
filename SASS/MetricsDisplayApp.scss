@@ -1,0 +1,127 @@
+$darkGray: #7f8c8d;
+$orange: #e67e22;
+$blue: #2980b9;
+$green: #27ae60;
+$mediumGray: #999;
+$lightGray: #ced2d5;
+
+
+#pageContainer {
+	background-color: $darkGray;
+}
+
+.userPanel {
+	border: 5px solid #000;
+	width: 330px;
+	height: 200px;
+	border-radius: 15px;
+	background: #fff;
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+	padding: 15px;
+}
+
+.userHeader > * {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.avatar, .avatarPlaceholder {
+	border-radius: 50%;
+	height: 75px;
+}
+
+.avatarPlaceholder {
+	background-color: $blue;
+	width: 75px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 54px;
+	text-align: center;
+}
+
+.userInfo {
+	width: 70%;
+}
+
+.userInfo > * {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.userName {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.userOccupation {
+	margin-left: 10px;
+	color: $mediumGray;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.userFooter > * {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.chartContainer {
+	width: 50%;
+}
+
+.chartText {
+	font-size: 12px;
+	width: 300px;
+	color: $mediumGray;
+	margin-top: -20px;
+	margin-left: 30px;
+}
+
+.metrics {
+	float: right;
+	position: relative;
+	top: -10px;
+	text-align: right;
+}
+
+.metrics * {
+	display: block;
+}
+
+.smallMetrics {
+	margin-bottom: 12px;
+}
+
+.metricWrapper {
+	margin-bottom: 8px;
+}
+
+.metric {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 7px;
+}
+
+.metricText {
+	color: $lightGray;
+}
+
+.revenue {
+	font-size: 20px;
+}
+
+.impressions {
+	color: $orange;
+}
+
+.conversions {
+	color: $blue;
+}
+
+.revenue {
+	color: $green;
+}

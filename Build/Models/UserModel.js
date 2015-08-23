@@ -1,0 +1,1 @@
+define(["require","backbone"],function(e){"use strict";var t=e("backbone"),n=t.Model.extend({defaults:{name:null,avatar:null,id:null,occupation:null,impressions:0,conversions:0,revenue:0}});return n});
