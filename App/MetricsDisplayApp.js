@@ -17,7 +17,7 @@ define(function(require) {
 		var self = this;
 			self.userCollection = new UserCollection() // Collection of users loaded from the userPath
 			,self.userMetrics = {} // Object to store the data loaded from the logsPath
-			,self.loaded = $.Deferred();; // An boolean indicating when the data has been loaded
+			,self.loaded = $.Deferred();; // A deferred object indicating when the data has been loaded
 		
 		// Load the Users
 		var userLoading = $.getJSON(userPath);
