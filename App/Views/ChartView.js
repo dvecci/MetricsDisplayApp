@@ -78,9 +78,10 @@ define(function(require) {
 			}
 			
 			var options = {
-				animation: false,
-				bezierCurve: false,
+				animation: true,
+				bezierCurve: true,
 				pointDot: false,
+				showTooltips: false,
 				scaleGridLineColor: 'rgba(0,0,0,0)',
 				scaleLineColor: 'rgba(0,0,0,0)',
 				scaleShowGridLines: false,

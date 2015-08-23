@@ -1,1 +1,0 @@
-define(["require","MetricsDisplayApp"],function(e){var t=e("MetricsDisplayApp"),n=new t("./Data/users.json","./Data/logs.json",$("#pageContainer"))});
