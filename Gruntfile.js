@@ -9,8 +9,8 @@ module.exports = function(grunt) {
 			[
 				{
 					"expand": false,
-					"src": 'Styles/MetricsDisplayApp.scss',
-					"dest": 'Styles/MetricsDisplayApp.css'
+					"src": 'App/Styles/MetricsDisplayApp.scss',
+					"dest": 'App/Styles/MetricsDisplayApp.css'
 				}
 			]
 		}
