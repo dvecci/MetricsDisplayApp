@@ -37,7 +37,10 @@ define(function(require) {
 			};
 			
 			// Grab the dates from the passed in data object. Each key is a date
-			var dates = Object.keys(self.data).sort();
+			var dates = Object.keys(self.data).sort(function(a,b) {
+				return new Date(a) -  new Date(b);
+			});
+			
 			// Store a reference to the chartData dataset
 			var dataArray = chartData.datasets[0].data;
 			
@@ -46,8 +49,8 @@ define(function(require) {
 			// key in the stored log data. If there is, plot it, if not, plot 0.
 			
 			// Get date bounds
-			var lowerDate = new Date(parseInt(dates[0]));
-			var upperDate = new Date(parseInt(dates[dates.length - 1]));
+			var lowerDate = new Date((dates[0]));
+			var upperDate = new Date((dates[dates.length - 1]));
 			
 			// Add the upper and lower bounds to the chart text and append it
 			var chartText = 'Conversions ' 
@@ -67,10 +70,12 @@ define(function(require) {
 			// a value. If so, plot it
 			var timeCounter = lowerDate.valueOf();
 			var numberOfDaysRecorded = (upperDate - lowerDate)/(1000*60*60*24) + 1;
+			
 			for (var i=1; i<numberOfDaysRecorded; i++) {
 				chartData.labels.push("");
 				timeCounter += 1000*60*60*24;
-				if (parseInt(dates[i]) === timeCounter) {
+				
+				if (new Date(dates[i]).valueOf() === timeCounter) {
 					dataArray.push(self.data[dates[i]]);
 				} else {
 					dataArray.push(0);

@@ -71,7 +71,8 @@ define(function(require) {
 						userData.revenue += log.revenue;
 						
 						// Create a date key, ignoring time of day, for the conversion
-						var date = new Date(log.time).setHours(0,0,0,0);
+						var date = new Date(log.time.substring(0,10));
+						
 						// If the user has conversion data, and the date already had a conversion, increment it
 						if (userData.conversionData && userData.conversionData[date]) {
 							userData.conversionData[date]++;
